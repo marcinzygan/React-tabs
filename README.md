@@ -1,6 +1,6 @@
 👋 Hi, I’m @marcinzygan
 
-# This is React Practice Project "Menu Items"
+# This is React Practice Project "Tabs"
 
 - This Project was done as a practice project for React
 - Made with React
@@ -8,10 +8,12 @@
 
 # Features implemented :
 
-- Project Setup
-- Display menu items from data
-- Function to filter items by category
-- Add category buttons dynamic by getting unique category value
+- Fetch data from API
+- Display Loading component conditionally
+- Display first Job info data
+- Render buttons for each job
+- Apply class name for buttons conditionally
+- Function to display currently clicked job
 
 # This project is Live <a href="https://mz-react-menu-items.netlify.app">Here</a> ! Enjoy .
 
