@@ -41,31 +41,32 @@ function App() {
         <h2>experience</h2>
         <div className="underline"></div>
       </div>
-      <div className="jobs-center"></div>
-      {/* btn container */}
-      <div className="btn-container">
-        {data.map((item, index) => (
-          <button
-            key={item.id}
-            onClick={() => jobToggle(index)}
-            className={`job-btn ${index === value && "active-btn"}`}
-          >
-            {item.company}
-          </button>
-        ))}
+      <div className="jobs-center">
+        {/* btn container */}
+        <div className="btn-container">
+          {data.map((item, index) => (
+            <button
+              key={item.id}
+              onClick={() => jobToggle(index)}
+              className={`job-btn ${index === value && "active-btn"}`}
+            >
+              {item.company}
+            </button>
+          ))}
+        </div>
+        {/* job info */}
+        <article className="job-info">
+          <h3>{title}</h3>
+          <h4>{company}</h4>
+          <p className="job-date">{dates}</p>
+          {duties.map((duty, index) => (
+            <div className="job-desc" key={index}>
+              <FaAngleDoubleRight className="job-icon" />
+              <p>{duty}</p>
+            </div>
+          ))}
+        </article>
       </div>
-      {/* job info */}
-      <article className="job-info">
-        <h3>{title}</h3>
-        <h4>{company}</h4>
-        <p className="job-date">{dates}</p>
-        {duties.map((duty, index) => (
-          <div className="job-desc" key={index}>
-            <FaAngleDoubleRight className="job-icon" />
-            <p>{duty}</p>
-          </div>
-        ))}
-      </article>
     </section>
   );
 }
